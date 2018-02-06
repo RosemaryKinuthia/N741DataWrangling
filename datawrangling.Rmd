@@ -3,10 +3,10 @@ title: 'Data Wrangling: February 7, 2018'
 author: "Melinda Higgins"
 date: "February 7, 2018"
 output:
-  html_document: default
   word_document: default
-  github_document: default
   pdf_document: default
+  github_document: default
+  html_document: default
 editor_options: 
   chunk_output_type: console
 ---
@@ -356,6 +356,61 @@ Suppose you wanted to know the mean education level of the Huband's in this data
 
 ```{r}
 mean(as.numeric(cmc$HusbEd))
+```
+
+### Select various elements
+
+```{r}
+# select the first 10 rows
+cmc_first10 <- cmc[1:10,]
+cmc_first10
+
+# select the first 2 columns
+cmc_cols12 <- cmc[,1:2]
+cmc_cols12
+
+# select the value in 5th row, 6th column
+cmc_row5col6 <- cmc[5,6]
+cmc_row5col6
+```
+
+### Select Rows
+
+Use the following code to find the number of subjects (number of rows) where the wife's age is > 40.
+
+```{r}
+# find the dimensions of the cmc dataset
+dim(cmc)
+
+# the 1st element is the number of rows, the 2nd 
+# is the number of columns - just look at number of rows
+dim(cmc)[1]
+
+# select only the rows where WifeAge > 40
+cmc_wife_gt40 <- cmc[cmc$WifeAge>40,]
+
+# get number of rows of this subset
+dim(cmc_wife_gt40)[1]
+```
+
+### Select Columns
+
+We can select columns by position or by name. Select the columns for the Wife variables, which are in columns 1, 2, 5, 6 - these variables are:
+
+* `WifeAge`
+* `WifeEd`
+* `WifeRel`
+* `WifeWork`
+
+```{r}
+# select these columns by position
+cmc_wifeOnly <- cmc[,c(1,2,5,6)]
+head(cmc_wifeOnly)
+
+# select these columns by variable names
+keepvars <- c("WifeAge", "WifeEd", "WifeRel", "WifeWork")
+cmc_wifeOnly <- cmc[,keepvars]
+head(cmc_wifeOnly)
 ```
 
 

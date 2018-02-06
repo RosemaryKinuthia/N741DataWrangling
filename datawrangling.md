@@ -570,6 +570,132 @@ mean(as.numeric(cmc$HusbEd))
 
     ## [1] 3.429735
 
+### Select various elements
+
+``` r
+# select the first 10 rows
+cmc_first10 <- cmc[1:10,]
+cmc_first10
+```
+
+    ## # A tibble: 10 x 10
+    ##    WifeAge   WifeEd   HusbEd NumChild WifeRel WifeWork HusbOcc SOLindex
+    ##      <int>   <fctr>   <fctr>    <int>  <fctr>   <fctr>  <fctr>   <fctr>
+    ##  1      24  med low med high        3   Islam       No       2 med high
+    ##  2      45      low med high       10   Islam       No       3     high
+    ##  3      43  med low med high        7   Islam       No       3     high
+    ##  4      42 med high  med low        9   Islam       No       3 med high
+    ##  5      36 med high med high        8   Islam       No       3  med low
+    ##  6      19     high     high        0   Islam       No       3 med high
+    ##  7      38  med low med high        6   Islam       No       3  med low
+    ##  8      21 med high med high        1   Islam      Yes       3  med low
+    ##  9      27  med low med high        3   Islam       No       3     high
+    ## 10      45      low      low        8   Islam       No       2  med low
+    ## # ... with 2 more variables: Media <fctr>, Contraceptive <fctr>
+
+``` r
+# select the first 2 columns
+cmc_cols12 <- cmc[,1:2]
+cmc_cols12
+```
+
+    ## # A tibble: 1,473 x 2
+    ##    WifeAge   WifeEd
+    ##      <int>   <fctr>
+    ##  1      24  med low
+    ##  2      45      low
+    ##  3      43  med low
+    ##  4      42 med high
+    ##  5      36 med high
+    ##  6      19     high
+    ##  7      38  med low
+    ##  8      21 med high
+    ##  9      27  med low
+    ## 10      45      low
+    ## # ... with 1,463 more rows
+
+``` r
+# select the value in 5th row, 6th column
+cmc_row5col6 <- cmc[5,6]
+cmc_row5col6
+```
+
+    ## # A tibble: 1 x 1
+    ##   WifeWork
+    ##     <fctr>
+    ## 1       No
+
+### Select Rows
+
+Use the following code to find the number of subjects (number of rows) where the wife's age is &gt; 40.
+
+``` r
+# find the dimensions of the cmc dataset
+dim(cmc)
+```
+
+    ## [1] 1473   10
+
+``` r
+# the 1st element is the number of rows, the 2nd 
+# is the number of columns - just look at number of rows
+dim(cmc)[1]
+```
+
+    ## [1] 1473
+
+``` r
+# select only the rows where WifeAge > 40
+cmc_wife_gt40 <- cmc[cmc$WifeAge>40,]
+
+# get number of rows of this subset
+dim(cmc_wife_gt40)[1]
+```
+
+    ## [1] 306
+
+### Select Columns
+
+We can select columns by position or by name. Select the columns for the Wife variables, which are in columns 1, 2, 5, 6 - these variables are:
+
+-   `WifeAge`
+-   `WifeEd`
+-   `WifeRel`
+-   `WifeWork`
+
+``` r
+# select these columns by position
+cmc_wifeOnly <- cmc[,c(1,2,5,6)]
+head(cmc_wifeOnly)
+```
+
+    ## # A tibble: 6 x 4
+    ##   WifeAge   WifeEd WifeRel WifeWork
+    ##     <int>   <fctr>  <fctr>   <fctr>
+    ## 1      24  med low   Islam       No
+    ## 2      45      low   Islam       No
+    ## 3      43  med low   Islam       No
+    ## 4      42 med high   Islam       No
+    ## 5      36 med high   Islam       No
+    ## 6      19     high   Islam       No
+
+``` r
+# select these columns by variable names
+keepvars <- c("WifeAge", "WifeEd", "WifeRel", "WifeWork")
+cmc_wifeOnly <- cmc[,keepvars]
+head(cmc_wifeOnly)
+```
+
+    ## # A tibble: 6 x 4
+    ##   WifeAge   WifeEd WifeRel WifeWork
+    ##     <int>   <fctr>  <fctr>   <fctr>
+    ## 1      24  med low   Islam       No
+    ## 2      45      low   Islam       No
+    ## 3      43  med low   Islam       No
+    ## 4      42 med high   Islam       No
+    ## 5      36 med high   Islam       No
+    ## 6      19     high   Islam       No
+
 TIDY Data
 ---------
 
