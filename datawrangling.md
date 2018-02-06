@@ -1,9 +1,9 @@
-Data Wrangling: January 25, 2017
+Data Wrangling: February 7, 2018
 ================
 Melinda Higgins
-January 25, 2017
+February 7, 2018
 
-Data Wrangling: January 25, 2017
+Data Wrangling: February 7, 2018
 --------------------------------
 
 In today's class we will cover the various data (or "object") structures in `R`. We will cover the following objects:
@@ -504,7 +504,7 @@ cmc$Contraceptive <- factor(cmc$Contraceptive,
 head(cmc)
 ```
 
-    ## # A tibble: 6 × 10
+    ## # A tibble: 6 x 10
     ##   WifeAge   WifeEd   HusbEd NumChild WifeRel WifeWork HusbOcc SOLindex
     ##     <int>   <fctr>   <fctr>    <int>  <fctr>   <fctr>  <fctr>   <fctr>
     ## 1      24  med low med high        3   Islam       No       2 med high

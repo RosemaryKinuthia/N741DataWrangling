@@ -1,15 +1,17 @@
 ---
-title: 'Data Wrangling: January 25, 2017'
+title: 'Data Wrangling: February 7, 2018'
 author: "Melinda Higgins"
-date: "January 25, 2017"
+date: "February 7, 2018"
 output:
   html_document: default
+  word_document: default
   github_document: default
   pdf_document: default
-  word_document: default
+editor_options: 
+  chunk_output_type: console
 ---
 
-## Data Wrangling: January 25, 2017
+## Data Wrangling: February 7, 2018
 
 In today's class we will cover the various data (or "object") structures in `R`. We will cover the following objects:
 
