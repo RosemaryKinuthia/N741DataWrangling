@@ -2,17 +2,15 @@
 
 N741 Lecture and Exercises on Data Wrangling
 
-Given on January 25, 2017.
+Given on February 7, 2018.
 
-1. Click on the MD file "datawrangling.md" which will contain the R code chunks AND the R output.
+1. You can fork a copy of this repository to your own Github account and then clone your copied repository for your own review in class using RStudio and GIT.
 
-2. You can open and run through the R code chunks individually and interactively if you open the RMD file in RStudio.
+2. View the HTML output at [https://melindahiggins2000.github.io/N741DataWrangling/datawrangling.html](https://melindahiggins2000.github.io/N741DataWrangling/datawrangling.html)
 
-3. Also look at the HTML, PDF and WORD document formats to see how the output varies between them - especially the tables.
+3. You can open and run through the R code chunks individually and interactively if you open the RMD file in RStudio.
 
-4. Hint: You can't directly view the HTML file from inside Github. 
-    + Instead, get the URL for the HTML RAW File - for example [https://raw.githubusercontent.com/melindahiggins2000/N741DataWrangling/master/datawrangling.html](https://raw.githubusercontent.com/melindahiggins2000/N741DataWrangling/master/datawrangling.html) but type the following in front of this URL `http://htmlpreview.github.com/?`
-    + So, the full URL to view this HTML file in the browset is [http://htmlpreview.github.io/?https://raw.githubusercontent.com/melindahiggins2000/N741DataWrangling/master/datawrangling.html](http://htmlpreview.github.io/?https://raw.githubusercontent.com/melindahiggins2000/N741DataWrangling/master/datawrangling.html)
-    + This feature can also be accessed using the "preview" site at [https://htmlpreview.github.io/](https://htmlpreview.github.io/)
+4. Also look at the HTML, PDF and WORD document formats to see how the output varies between them - especially the tables.
+
 
 
